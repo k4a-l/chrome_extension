@@ -1,0 +1,40 @@
+/* .ControllerBoxContainer{
+    display:none;
+} */
+
+.timeOnOffButton-iconHide > path {
+  transition: all 0.3s ease;
+}
+
+.timeOnOffButton:hover .timeOnOffButton-iconHide > path {
+  fill: #007cff !important;
+}
+
+.timeOnOffButton::after {
+  content: "シークバーの表示/非表示を切り替える";
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-font-kerning: none;
+  font-kerning: none;
+  pointer-events: none;
+  position: absolute;
+  bottom: calc(100% + 4px);
+  padding: 0 0.35em;
+  border: 1px solid #333;
+  z-index: 6000001;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #fff;
+  background-color: rgba(28, 28, 28, 0.9);
+  /* width: 0; */
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.timeOnOffButton:hover::after {
+  opacity: 1;
+}
