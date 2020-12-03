@@ -8,7 +8,7 @@
     {
       "matches": ["https://www.nicovideo.jp/*"],
       "js": ["insert.js"],
-      "css": ["style.css"]
+      "css": ["insert.css"]
     }
   ],
   "background": {
