@@ -3,15 +3,10 @@ let hideController = document.getElementById("hide");
 
 let title = "Toggle NicoNico Controller Box";
 let show = "show";
-chrome.storage.sync.get(title + "show", function (data) {
-  if (data !== null) {
-    show = data;
-  } else {
-    show = "show";
-  }
-});
+
 
 hideController.onclick = function (element) {
+  console.log("click");
   setControllerBoxDisplay(false);
 };
 

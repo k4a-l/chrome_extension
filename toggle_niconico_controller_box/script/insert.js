@@ -13,29 +13,32 @@ let show = "show";
 /**********
  * 初期処理
  **********/
-insertButton();
+if (location.hostname == "www.nicovideo.jp") {
+  if (document.getElementsByClassName("ControllerContainer-area").length) {
+    insertButton();
 
-/******************** EventHandler ********************/
-/**********
- * ボタンクリック時の動作です。
- **********/
-document.getElementsByClassName("timeOnOffButton")[0].onclick = function (
-  element
-) {
-  console.log("show : " + show);
-  if (show == "show") {
-    console.log("now show");
-    setControllerBoxDisplay(false);
-    setSvg(false);
-    saveShowData("hide");
-  } else {
-    console.log("now hide");
-    setControllerBoxDisplay(true);
-    setSvg(true);
-    saveShowData("show");
+    /******************** EventHandler ********************/
+    /**********
+     * ボタンクリック時の動作です。
+     **********/
+    document.getElementsByClassName("timeOnOffButton")[0].onclick = function (
+      element
+    ) {
+      // console.log("show : " + show);
+      if (show == "show") {
+        // console.log("now show");
+        setControllerBoxDisplay(false);
+        setSvg(false);
+        saveShowData("hide");
+      } else {
+        // console.log("now hide");
+        setControllerBoxDisplay(true);
+        setSvg(true);
+        saveShowData("show");
+      }
+    };
   }
-};
-
+}
 /**********
  * 切り替えボタンを突っ込みます
  **********/
